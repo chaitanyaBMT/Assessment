@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <h1>LOGIN Form</h1>
+    <input type="email" placeholder="Please enter your Email id" class="email" required maxlength="25"><br><br>
+    <input type="password"  placeholder="Enter your password" class="pwd" required maxlength="25"><br><br>
+    <button class="login" onclick="ls">LOGIN</button>
+     
+    
+</body>
+<script>
+    let username = document.getElementsByClassName('email').value;
+   let password = document.getElementsByClassName('pwd').value;
+    function ls(){
+        localStorage.setItem('email', email.value);
+        localStorage.setItem('pwd', pwd.value);
+    }
+    function check(){
+        let storedName = localStorage.getItem('email');
+        let storedpwd= localStorage.getItem('pwd');
+
+        let Ename= document.getElementsByClassName('email');
+        let Epwd= document.getElementsByClassName('pwd');
+        if(Ename.value !== storedName || Epwd.value !== storedpwd){
+            alert('ERROR')
+
+        }else{
+            alert('you are logged in.')
+        }
+
+    }
+        
+
+   
+   
+    
+    
+
+</script>
+</html>
